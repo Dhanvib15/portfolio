@@ -95,8 +95,8 @@
               <ul
                 class="flex justify-between flex-col max-sm:flex-col max-sm:absolute max-sm:left-0 max-sm:w-full max-sm:top-15 max-sm:bg-[#242424] max-sm:z-10 max-sm:p-3 sm:flex-row max"
               >
-                <a href="#Home">
-                  <li class="text-[#FD6F00] cursor-pointer">Home</li>
+                <a href="#Dashboard">
+                  <li class="text-[#FD6F00] cursor-pointer">Dashboard</li>
                 </a>
                 <a href="#Service">
                   <li class="text-[#959595] cursor-pointer max-sm:mt-1">
@@ -135,7 +135,7 @@
         <main>
           <div
             class="flex justify-between py-2 text-white max-sm:flex-col"
-            id="Home"
+            id="Dashboard"
           >
             <div
               class="w-[50%] flex flex-col justify-center max-sm:items-center max-sm:text-center max-sm:w-full"
@@ -521,7 +521,7 @@
               <ul
                 class="w-full max-w-xl flex flex-wrap justify-center gap-4 md:gap-8 text-center"
               >
-                <li class="text-[#959595] cursor-pointer">Home</li>
+                <li class="text-[#959595] cursor-pointer">Dashboard</li>
                 <li class="text-[#959595] cursor-pointer">Service</li>
                 <li class="text-[#959595] cursor-pointer">About me</li>
                 <li class="text-[#959595] cursor-pointer">Portfolio</li>
