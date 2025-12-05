@@ -68,6 +68,205 @@
           display: block;
         }
       }
+
+      /* Custom Scrollbar Styling */
+      /* Webkit browsers (Chrome, Safari, Edge) */
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #1E1E1E;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #fd6f00 0%, #e46400 100%);
+        border-radius: 10px;
+        border: 2px solid #1E1E1E;
+        transition: all 0.3s ease;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #ff7a0a 0%, #f56a0a 100%);
+        border: 2px solid #2a2a2a;
+      }
+
+      ::-webkit-scrollbar-thumb:active {
+        background: linear-gradient(180deg, #e46400 0%, #ca5900 100%);
+      }
+
+      ::-webkit-scrollbar-corner {
+        background: #1E1E1E;
+      }
+
+      /* Firefox */
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: #fd6f00 #1E1E1E;
+      }
+
+      /* Portfolio overlay scrollbar - more subtle */
+      .portfolio-overlay::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .portfolio-overlay::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+      }
+
+      .portfolio-overlay::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .portfolio-overlay::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      /* Portfolio Hover Effects */
+      .portfolio-item {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border-radius: 8px;
+      }
+
+      .portfolio-item:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(253, 111, 0, 0.3);
+      }
+
+      .portfolio-item img {
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        transform-origin: center;
+      }
+
+      .portfolio-item:hover img {
+        transform: scale(1.1);
+      }
+
+      .portfolio-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(253, 111, 0, 0.95), rgba(230, 100, 0, 0.95));
+        color: white;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        opacity: 0;
+        transform: scale(0.9);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow-y: auto;
+      }
+
+      .portfolio-item:hover .portfolio-overlay {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .portfolio-overlay > * {
+        transform: translateY(20px);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transition-delay: 0.1s;
+      }
+
+      .portfolio-item:hover .portfolio-overlay > * {
+        transform: translateY(0);
+      }
+
+      .portfolio-overlay h3 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: white;
+      }
+
+      .portfolio-overlay .tech-stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin: 10px 0;
+      }
+
+      .portfolio-overlay .tech-tag {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 4px 8px;
+        border-radius: 3px;
+        font-size: 12px;
+      }
+
+      .portfolio-overlay .features {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0;
+      }
+
+      .portfolio-overlay .features li {
+        margin: 5px 0;
+        padding-left: 15px;
+        position: relative;
+        font-size: 13px;
+      }
+
+      .portfolio-overlay .features li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: white;
+        font-weight: bold;
+      }
+
+      .portfolio-overlay .description {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-top: 10px;
+      }
+
+      /* Mobile Touch Support */
+      @media (max-width: 768px) {
+        .portfolio-overlay {
+          padding: 15px;
+          font-size: 12px;
+        }
+
+        .portfolio-overlay h3 {
+          font-size: 20px;
+        }
+
+        .portfolio-overlay .description {
+          font-size: 12px;
+        }
+
+        .portfolio-overlay .features li {
+          font-size: 11px;
+        }
+
+        .portfolio-overlay .tech-tag {
+          font-size: 10px;
+          padding: 3px 6px;
+        }
+      }
+
+      /* Touch device support - show overlay on tap */
+      @media (hover: none) and (pointer: coarse) {
+        .portfolio-item.active .portfolio-overlay {
+          opacity: 1;
+        }
+      }
+
+      .header-navbar {
+    background-color: rgb(30 30 30);
+    z-index: 99999999;
+      }
     </style>
   </head>
 
@@ -76,7 +275,7 @@
       class="w-full bg-[#1E1E1E] max-lg:w-full max-md:w-full max-sm:w-full flex justify-center"
     >
       <div class="w-[90%]">
-        <nav class="py-5 sticky top-0 z-50">
+        <nav class="py-5 sticky top-0 z-50 header-navbar">
           <div
             class="flex items-center text-white justify-between max-sm:align-middle"
           >
@@ -182,11 +381,11 @@
                   <p class="text-[#DFDFDF]">Years Experience</p>
                 </div>
                 <div class="border-r-1 my-3 px-4 border-[#DFDFDF]">
-                  <p class="text-[#FD6F00] text-[18px]">20+</p>
+                  <p class="text-[#FD6F00] text-[18px]">12+</p>
                   <p class="text-[#DFDFDF]">Projects Done</p>
                 </div>
                 <div class="my-3 px-4">
-                  <p class="text-[#FD6F00] text-[18px]">10+</p>
+                  <p class="text-[#FD6F00] text-[18px]">7+</p>
                   <p class="text-[#DFDFDF]">Happy Clients</p>
                 </div>
               </div>
@@ -366,27 +565,76 @@
               class="grid grid-cols-3 gap-15 pt-[3rem] max-md:grid-cols-2 max-sm:grid-cols-1"
               id="PortfolioCard"
             >
-              <div class="w-[100%] h-[400px]">
-                <div class="w-full h-[350px] max-sm:h-[270px]">
+              <!-- Recensy CRM/Wagmii System -->
+              <div class="w-[100%] h-[400px] portfolio-item">
+                <div class="w-full h-[350px] max-sm:h-[270px] relative">
                   <img
                     src="{{ asset('assets/images/rectangle_22.png') }}"
-                    class="w-full h-full"
-                    alt=""
+                    class="w-full h-full object-cover"
+                    alt="Recensy CRM/Wagmii System"
                   />
+                  <div class="portfolio-overlay">
+                    <h3>Recensy CRM/Wagmii System</h3>
+                    <p class="text-sm mb-3 opacity-90">Custom CRM & Payment System</p>
+                    <div class="tech-stack">
+                      <span class="tech-tag">Laravel</span>
+                      <span class="tech-tag">PHP</span>
+                      <span class="tech-tag">jQuery</span>
+                      <span class="tech-tag">ChatGPT API</span>
+                      <span class="tech-tag">WhatsApp API</span>
+                      <span class="tech-tag">Google Calendar</span>
+                      <span class="tech-tag">Payment Flow</span>
+                    </div>
+                    <ul class="features">
+                      <li>Payment flow integration</li>
+                      <li>Affiliation flow system</li>
+                      <li>ChatGPT & WhatsApp integration</li>
+                      <li>Google Calendar connectivity</li>
+                      <li>Real-time customer communication</li>
+                      <li>Automation workflows</li>
+                      <li>Advanced CRM features</li>
+                    </ul>
+                    <p class="description">
+                      Architected and developed a comprehensive CRM and payment system (Recensy CRM/Wagmii System) with integrated payment flow, affiliation management, ChatGPT and WhatsApp APIs for real-time customer communication. Implemented automation workflows with Google Calendar sync and advanced CRM features.
+                    </p>
+                  </div>
                 </div>
                 <div class="flex justify-between px-2 bg-[#242424] py-2">
-                  <p class="text-[#C6C6C6]">Recency CRM</p>
-                  <p class="text-[#959595]">CRM System</p>
+                  <p class="text-[#C6C6C6]">Recensy CRM/Wagmii System</p>
+                  <p class="text-[#959595]">CRM & Payment System</p>
                 </div>
               </div>
 
-              <div class="w-[100%] h-[400px] max-sm:mt-[-120px]">
-                <div class="w-full h-[350px] max-sm:h-[270px]">
+              <!-- EVSpares -->
+              <div class="w-[100%] h-[400px] max-sm:mt-[-120px] portfolio-item">
+                <div class="w-full h-[350px] max-sm:h-[270px] relative">
                   <img
                     src="{{ asset('assets/images/rectangle_22.png') }}"
-                    class="w-full h-full"
-                    alt=""
+                    class="w-full h-full object-cover"
+                    alt="EVSpares"
                   />
+                  <div class="portfolio-overlay">
+                    <h3>EVSpares</h3>
+                    <p class="text-sm mb-3 opacity-90">Automotive Parts E-commerce</p>
+                    <div class="tech-stack">
+                      <span class="tech-tag">Laravel</span>
+                      <span class="tech-tag">Vue.js</span>
+                      <span class="tech-tag">Stripe</span>
+                      <span class="tech-tag">MySQL</span>
+                      <span class="tech-tag">Excel Import</span>
+                    </div>
+                    <ul class="features">
+                      <li>Stripe payment integration</li>
+                      <li>VIN-based search filters</li>
+                      <li>Bulk Excel product imports</li>
+                      <li>Admin dashboard</li>
+                      <li>Stock management system</li>
+                      <li>Order control system</li>
+                    </ul>
+                    <p class="description">
+                      Led the end-to-end development of an automotive parts e-commerce platform. Integrated Stripe for secure payments, advanced VIN-based search filters, bulk Excel product imports, and a custom-built admin dashboard.
+                    </p>
+                  </div>
                 </div>
                 <div class="flex justify-between px-2 bg-[#242424] py-2">
                   <p class="text-[#C6C6C6]">EVSpares</p>
@@ -394,13 +642,34 @@
                 </div>
               </div>
 
-              <div class="w-[100%] h-[400px] max-sm:mt-[-120px]">
-                <div class="w-full h-[350px] max-sm:h-[270px]">
+              <!-- Talent UAE -->
+              <div class="w-[100%] h-[400px] max-sm:mt-[-120px] portfolio-item">
+                <div class="w-full h-[350px] max-sm:h-[270px] relative">
                   <img
                     src="{{ asset('assets/images/rectangle_22.png') }}"
-                    class="w-full h-full"
-                    alt=""
+                    class="w-full h-full object-cover"
+                    alt="Talent UAE"
                   />
+                  <div class="portfolio-overlay">
+                    <h3>Talent UAE</h3>
+                    <p class="text-sm mb-3 opacity-90">Finance Management System</p>
+                    <div class="tech-stack">
+                      <span class="tech-tag">Laravel</span>
+                      <span class="tech-tag">Vue.js</span>
+                      <span class="tech-tag">Cron Jobs</span>
+                      <span class="tech-tag">MySQL</span>
+                    </div>
+                    <ul class="features">
+                      <li>Expense tracking module</li>
+                      <li>Reconciliation system</li>
+                      <li>Dynamic reporting</li>
+                      <li>Reactive frontend interfaces</li>
+                      <li>Scheduled task automation</li>
+                    </ul>
+                    <p class="description">
+                      Engineered a finance management system for client-side accounting. Built modules for expense tracking, reconciliation, and dynamic reporting. Utilized Vue.js for reactive frontend interfaces and Laravel for scheduled task automation using cron jobs.
+                    </p>
+                  </div>
                 </div>
                 <div class="flex justify-between px-2 bg-[#242424] py-2">
                   <p class="text-[#C6C6C6]">Talent UAE</p>
@@ -408,13 +677,37 @@
                 </div>
               </div>
 
-              <div class="w-[100%] h-[400px] max-sm:mt-[-120px]">
-                <div class="w-full h-[350px] max-sm:h-[270px]">
+              <!-- Nquiree -->
+              <div class="w-[100%] h-[400px] max-sm:mt-[-120px] portfolio-item">
+                <div class="w-full h-[350px] max-sm:h-[270px] relative">
                   <img
                     src="{{ asset('assets/images/rectangle_22.png') }}"
-                    class="w-full h-full"
-                    alt=""
+                    class="w-full h-full object-cover"
+                    alt="Nquiree"
                   />
+                  <div class="portfolio-overlay">
+                    <h3>Nquiree</h3>
+                    <p class="text-sm mb-3 opacity-90">E-commerce Platform</p>
+                    <div class="tech-stack">
+                      <span class="tech-tag">Laravel</span>
+                      <span class="tech-tag">Vue.js</span>
+                      <span class="tech-tag">Zoho CRM</span>
+                      <span class="tech-tag">Tailwind CSS</span>
+                      <span class="tech-tag">Chatbot</span>
+                    </div>
+                    <ul class="features">
+                      <li>Zoho CRM integration</li>
+                      <li>Chatbot support</li>
+                      <li>Redesigned checkout flow</li>
+                      <li>VAT section management</li>
+                      <li>Testimonials system</li>
+                      <li>Invoice system</li>
+                      <li>Fully responsive design</li>
+                    </ul>
+                    <p class="description">
+                      Enhanced an existing e-commerce system with a feature-rich front end including testimonials, product tabs, and dynamic content pages. Integrated Zoho CRM and chatbot, redesigned the checkout and invoice workflows.
+                    </p>
+                  </div>
                 </div>
                 <div class="flex justify-between px-2 bg-[#242424] py-2">
                   <p class="text-[#C6C6C6]">Nquiree</p>
@@ -422,17 +715,87 @@
                 </div>
               </div>
 
-              <div class="w-[100%] h-[400px] max-sm:mt-[-120px]">
-                <div class="w-full h-[350px] max-sm:h-[270px]">
+              <!-- PPAY - Project Pay -->
+              <div class="w-[100%] h-[400px] max-sm:mt-[-120px] portfolio-item">
+                <div class="w-full h-[350px] max-sm:h-[270px] relative">
                   <img
                     src="{{ asset('assets/images/rectangle_22.png') }}"
-                    class="w-full h-full"
-                    alt=""
+                    class="w-full h-full object-cover"
+                    alt="PPAY - Project Pay"
                   />
+                  <div class="portfolio-overlay">
+                    <h3>PPAY - Project Pay</h3>
+                    <p class="text-sm mb-3 opacity-90">Payment Tracking System</p>
+                    <div class="tech-stack">
+                      <span class="tech-tag">Laravel</span>
+                      <span class="tech-tag">Vue.js</span>
+                      <span class="tech-tag">Inertia.js</span>
+                      <span class="tech-tag">MySQL</span>
+                      <span class="tech-tag">Modular Architecture</span>
+                    </div>
+                    <ul class="features">
+                      <li>Payment tracking module</li>
+                      <li>Claims management</li>
+                      <li>Variations tracking</li>
+                      <li>Due dates management</li>
+                      <li>Bank detail management</li>
+                      <li>Ledger entries</li>
+                      <li>Live data interaction</li>
+                    </ul>
+                    <p class="description">
+                      Designed a subcontractor payment tracking module with features for managing claims, variations, due dates, bank info, and ledger entries. Built using modular Laravel architecture with Inertia.js and Vue.js components for live data interaction.
+                    </p>
+                  </div>
                 </div>
                 <div class="flex justify-between px-2 bg-[#242424] py-2">
                   <p class="text-[#C6C6C6]">PPAY - Project Pay</p>
                   <p class="text-[#959595]">Payment System</p>
+                </div>
+              </div>
+
+              <!-- Bohemian Adventure -->
+              <div class="w-[100%] h-[400px] max-sm:mt-[-120px] portfolio-item">
+                <div class="w-full h-[350px] max-sm:h-[270px] relative">
+                  <img
+                    src="{{ asset('assets/images/rectangle_22.png') }}"
+                    class="w-full h-full object-cover"
+                    alt="Bohemian Adventure"
+                  />
+                  <div class="portfolio-overlay">
+                    <h3>Bohemian Adventure</h3>
+                    <p class="text-sm mb-3 opacity-90" style="color: #fd6f00; font-weight: 500;">Tour booking system</p>
+                    <div class="tech-stack">
+                      <span class="tech-tag">PHP</span>
+                      <span class="tech-tag">Laravel</span>
+                      <span class="tech-tag">Vue.js</span>
+                      <span class="tech-tag">Inertia.js</span>
+                      <span class="tech-tag">Bootstrap</span>
+                      <span class="tech-tag">Google Map</span>
+                      <span class="tech-tag">Pick up system</span>
+                    </div>
+                    <ul class="features">
+                      <li>Tour booking functionality</li>
+                      <li>Payment entries & management</li>
+                      <li>Expense tracking & reports</li>
+                      <li>Tour planning & scheduling</li>
+                      <li>Guide & vehicle management</li>
+                      <li>Availability tracking system</li>
+                      <li>Place & base data management</li>
+                      <li>Currency exchange rates</li>
+                      <li>Profit & Loss reports</li>
+                      <li>Year-over-year comparisons</li>
+                      <li>Dashboard with today/tomorrow tours</li>
+                      <li>Drag & drop functionality</li>
+                      <li>Merchandise sales module</li>
+                    </ul>
+                    <p class="description">
+                      Developed a comprehensive tour booking and management system with complex database structure. Features include booking functionality, payment entries, expense reports, tour planning, guide and vehicle availability, place management, currency exchange rates, profit & loss reports with year-over-year comparisons, interactive dashboard, drag & drop functionality, and merchandise sales.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex justify-between px-2 bg-[#242424] py-2">
+                  <p class="text-[#C6C6C6]">Bohemian Adventure</p>
+                  <p class="text-[#959595]">Tour Management System</p>
                 </div>
               </div>
             </div>
@@ -601,6 +964,28 @@
 
       menuIcon.addEventListener("click", () => {
         navBar.classList.toggle("show");
+      });
+
+      // Portfolio hover/touch support for mobile devices
+      document.querySelectorAll('.portfolio-item').forEach(item => {
+        // Touch support for mobile
+        item.addEventListener('touchstart', function(e) {
+          // Remove active class from all other items
+          document.querySelectorAll('.portfolio-item').forEach(otherItem => {
+            if (otherItem !== item) {
+              otherItem.classList.remove('active');
+            }
+          });
+          // Toggle active class on current item
+          item.classList.toggle('active');
+        });
+
+        // Close overlay when clicking outside on mobile
+        document.addEventListener('touchstart', function(e) {
+          if (!item.contains(e.target)) {
+            item.classList.remove('active');
+          }
+        });
       });
 
       // Contact Form Submission
