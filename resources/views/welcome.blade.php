@@ -85,7 +85,9 @@
             </div>
 
             <div>
-              <h2 class="gradient-box text-2xl max-sm:ml-[10px]">LOGO</h2>
+              <a href="#Dashboard">
+                <img src="{{ asset('assets/images/logo_2.png') }}" alt="Dhanvi - Full Stack Developer" class="h-10 max-sm:h-8 max-sm:ml-[10px]" />
+              </a>
             </div>
 
             <div
@@ -121,12 +123,14 @@
               </ul>
             </div>
             <div>
-              <button
-                class="orange-gradient py-1 px-5 rounded-[5px] cursor-pointer"
-                id="HireMe"
-              >
-                Hire Me
-              </button>
+              <a href="#ContactMe">
+                <button
+                  class="orange-gradient py-1 px-5 rounded-[5px] cursor-pointer"
+                  id="HireMe"
+                >
+                  Hire Me
+                </button>
+              </a>
             </div>
           </div>
         </nav>
@@ -146,38 +150,43 @@
                 Dhanvi Bhadiyadra
               </p>
               <h1 class="SkillColor text-6xl font-bold py-2.5" id="Skill">
-                PHP/Laravel Developer
+                Laravel / Vue.js Developer
               </h1>
               <div class="flex pb-6" id="Social">
-                <img src="{{ asset('assets/images/frame_52.png') }}" id="inst" alt="" />
-                <img src="{{ asset('assets/images/frame_53.png') }}" id="link" alt="" class="pl-2" />
+                <a href="https://www.linkedin.com/in/dhanvi-bhadiyadara-634bbb205" target="_blank">
+                  <img src="{{ asset('assets/images/frame_53.png') }}" id="link" alt="LinkedIn" class="pl-2 cursor-pointer" />
+                </a>
               </div>
               <div class="pb-9">
-                <button
-                  class="orange-gradient py-1 px-5 rounded-[5px] cursor-pointer"
-                >
-                  Hire Me
-                </button>
-                <button
-                  class="ml-3 border-1 text-[#959595] cursor-pointer py-1 px-3 rounded-[5px]"
-                >
-                  Download CV
-                </button>
+                <a href="#ContactMe">
+                  <button
+                    class="orange-gradient py-1 px-5 rounded-[5px] cursor-pointer"
+                  >
+                    Hire Me
+                  </button>
+                </a>
+                <a href="{{ asset('assets/docs/Dhanvi_Bhadiyadra_Resume.pdf') }}" download>
+                  <button
+                    class="ml-3 border-1 text-[#959595] cursor-pointer py-1 px-3 rounded-[5px]"
+                  >
+                    Download CV
+                  </button>
+                </a>
               </div>
 
               <div
                 class="bg-[#242424] flex w-[55%] justify-between rounded-[5px] max-md:w-[100%] max-xl:w-[80%] max-lg:w-[80%] max-md:w-full"
               >
                 <div class="border-r-1 my-3 px-4 border-[#DFDFDF]">
-                  <p class="text-[#FD6F00] text-[18px]">5+</p>
-                  <p class="text-[#DFDFDF]">Experiences</p>
+                  <p class="text-[#FD6F00] text-[18px]">3+</p>
+                  <p class="text-[#DFDFDF]">Years Experience</p>
                 </div>
                 <div class="border-r-1 my-3 px-4 border-[#DFDFDF]">
                   <p class="text-[#FD6F00] text-[18px]">20+</p>
-                  <p class="text-[#DFDFDF]">Project done</p>
+                  <p class="text-[#DFDFDF]">Projects Done</p>
                 </div>
                 <div class="my-3 px-4">
-                  <p class="text-[#FD6F00] text-[18px]">80+</p>
+                  <p class="text-[#FD6F00] text-[18px]">10+</p>
                   <p class="text-[#DFDFDF]">Happy Clients</p>
                 </div>
               </div>
@@ -197,7 +206,7 @@
               <!-- Image on top -->
               <img
                 class="h-full relative z-20"
-                src="./photo/WhatsApp_Image_2025-05-16_at_18.12.36_7d41f9ff-removebg-preview.png"
+                src="{{ asset('assets/images/img_1.png') }}"
                 alt="Person"
               />
             </div>
@@ -209,8 +218,7 @@
               Services
             </h3>
             <p class="text-center text-[#707070] pt-2" id="ServiceDetails">
-              Lorem ipsum dolor sit amet consectetur. Imperdiet convallis
-              blandit felis ligula aliquam
+              Full-stack web development services with modern technologies and best practices
             </p>
 
             <div
@@ -222,11 +230,10 @@
                   <img src="{{ asset('assets/images/user_2.png') }}" alt="" />
                 </div>
                 <h4 class="text-[#FD6F00] pt-2 text-[20px]" id="ServiceName">
-                  App Design
+                  Full-Stack Development
                 </h4>
                 <p class="text-[#575757] pt-4" id="ServiceDetail">
-                  Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit
-                  amet consectetur
+                  Building scalable web applications using Laravel, Vue.js, and Inertia.js with robust backend logic and clean frontend design
                 </p>
               </div>
 
@@ -235,11 +242,10 @@
                   <img src="{{ asset('assets/images/user_2.png') }}" alt="" />
                 </div>
                 <h4 class="text-[#FD6F00] pt-2 text-[20px]" id="ServiceName">
-                  App Design
+                  API Integration
                 </h4>
                 <p class="text-[#575757] pt-4" id="ServiceDetail">
-                  Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit
-                  amet consectetur
+                  Integrating third-party APIs including ChatGPT, WhatsApp, Google Calendar, Stripe, and Zoho CRM for seamless automation
                 </p>
               </div>
 
@@ -248,11 +254,10 @@
                   <img src="{{ asset('assets/images/user_2.png') }}" alt="" />
                 </div>
                 <h4 class="text-[#FD6F00] pt-2 text-[20px]" id="ServiceName">
-                  App Design
+                  SPA Development
                 </h4>
                 <p class="text-[#575757] pt-4" id="ServiceDetail">
-                  Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit
-                  amet consectetur
+                  Creating responsive Single Page Applications using Vue.js and Inertia.js for smooth user experiences
                 </p>
               </div>
               <div class="text-center rounded-[5px] py-5 px-2 bg-[#242424]">
@@ -260,11 +265,10 @@
                   <img src="{{ asset('assets/images/user_2.png') }}" alt="" />
                 </div>
                 <h4 class="text-[#FD6F00] pt-2 text-[20px]" id="ServiceName">
-                  App Design
+                  Backend Architecture
                 </h4>
                 <p class="text-[#575757] pt-4" id="ServiceDetail">
-                  Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit
-                  amet consectetur
+                  Designing and implementing clean, scalable backend architectures with Laravel, MySQL, and RESTful APIs
                 </p>
               </div>
               <div class="text-center rounded-[5px] py-5 px-2 bg-[#242424]">
@@ -272,11 +276,10 @@
                   <img src="{{ asset('assets/images/user_2.png') }}" alt="" />
                 </div>
                 <h4 class="text-[#FD6F00] pt-2 text-[20px]" id="ServiceName">
-                  App Design
+                  Automation & Workflows
                 </h4>
                 <p class="text-[#575757] pt-4" id="ServiceDetail">
-                  Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit
-                  amet consectetur
+                  Building automation workflows with cron jobs, real-time communication tools, and scheduled task management
                 </p>
               </div>
               <div class="text-center rounded-[5px] py-5 px-2 bg-[#242424]">
@@ -284,11 +287,10 @@
                   <img src="{{ asset('assets/images/user_2.png') }}" alt="" />
                 </div>
                 <h4 class="text-[#FD6F00] pt-2 text-[20px]" id="ServiceName">
-                  App Design
+                  E-commerce Solutions
                 </h4>
                 <p class="text-[#575757] pt-4" id="ServiceDetail">
-                  Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit
-                  amet consectetur
+                  Developing e-commerce platforms with payment integration, inventory management, and admin dashboards
                 </p>
               </div>
             </div>
@@ -300,7 +302,7 @@
               About Me
             </h3>
             <p class="text-center text-[#707070] pt-2" id="AboutShow">
-              User Interface and User Experience and Also video editing
+              Laravel and Vue.js Developer specializing in full-stack web application development
             </p>
 
             <div
@@ -327,7 +329,7 @@
                 <!-- Image on top -->
                 <img
                   class="relative z-20 h-full"
-                  src="./photo/WhatsApp_Image_2025-05-16_at_18.12.36_7d41f9ff-removebg-preview.png"
+                  src="{{ asset('assets/images/img_3.png') }}"
                   alt="Person"
                 />
               </div>
@@ -336,30 +338,18 @@
                 class="w-[50%] flex flex-col justify-center max-md:w-full max-md:items-center max-md:pt-5"
               >
                 <p class="text-[#959595]">
-                  A software engineer, the modern-day architect of digital
-                  realms, navigates the ethereal landscapes of code, sculpting
-                  intangible structures that shape our technological world. With
-                  fingers poised over keyboards like virtuoso pianists, they
-                  compose symphonies of logic, their minds a labyrinth of
-                  algorithms and solutions.Their canvas is a screen, a vast
-                  expanse where lines of code dance in intricate patterns,
-                  weaving the fabric of programs and applications. Each
-                  keystroke is a brushstroke, crafting intricate architectures
-                  and breathing life into innovative designs.In this digital
-                  atelier, they don the mantle of problem solvers, confronting
-                  bugs and glitches like valiant knights in an ever-evolving
-                  quest for perfection. Debugging becomes a noble pursuit,
-                  unraveling the mysteries hidden within the tangled webs of
-                  code. designs.In this digital atelier.
+                  Highly skilled Laravel and Vue.js Developer with 3 years of experience in full-stack web application development. Expert in building responsive and scalable Single Page Applications (SPAs) using Laravel, Vue.js, Inertia.js, and Tailwind CSS. Proficient in third-party API integrations, automation workflows, and real-time communication tools including WhatsApp, ChatGPT, and Google Calendar. Strong backend architecture understanding, clean UI implementation, and a proven record of delivering business-critical projects on time. Experienced in both collaborative team settings and independent freelance projects, with excellent communication and problem-solving abilities. I specialize in creating efficient, scalable applications with robust backend logic and clean frontend design, contributing to diverse projects ranging from e-commerce platforms to CRM systems.
                 </p>
                 <div class="pt-5">
-                  <button
-                    class="orange-gradient py-2 px-4 rounded-[5px] cursor-pointer flex"
-                  >
-                    <img src="{{ asset('assets/images/Download.png') }}" alt="" /><span class="pl-2"
-                      >Download CV</span
+                  <a href="{{ asset('assets/docs/Dhanvi_Bhadiyadra_Resume.pdf') }}" download>
+                    <button
+                      class="orange-gradient py-2 px-4 rounded-[5px] cursor-pointer flex"
                     >
-                  </button>
+                      <img src="{{ asset('assets/images/Download.png') }}" alt="" /><span class="pl-2"
+                        >Download CV</span
+                      >
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -385,8 +375,8 @@
                   />
                 </div>
                 <div class="flex justify-between px-2 bg-[#242424] py-2">
-                  <p class="text-[#C6C6C6]">Name Project</p>
-                  <p class="text-[#959595]">Categories</p>
+                  <p class="text-[#C6C6C6]">Recency CRM</p>
+                  <p class="text-[#959595]">CRM System</p>
                 </div>
               </div>
 
@@ -399,8 +389,8 @@
                   />
                 </div>
                 <div class="flex justify-between px-2 bg-[#242424] py-2">
-                  <p class="text-[#C6C6C6]">Name Project</p>
-                  <p class="text-[#959595]">Categories</p>
+                  <p class="text-[#C6C6C6]">EVSpares</p>
+                  <p class="text-[#959595]">E-commerce</p>
                 </div>
               </div>
 
@@ -413,8 +403,8 @@
                   />
                 </div>
                 <div class="flex justify-between px-2 bg-[#242424] py-2">
-                  <p class="text-[#C6C6C6]">Name Project</p>
-                  <p class="text-[#959595]">Categories</p>
+                  <p class="text-[#C6C6C6]">Talent UAE</p>
+                  <p class="text-[#959595]">Finance System</p>
                 </div>
               </div>
 
@@ -427,8 +417,8 @@
                   />
                 </div>
                 <div class="flex justify-between px-2 bg-[#242424] py-2">
-                  <p class="text-[#C6C6C6]">Name Project</p>
-                  <p class="text-[#959595]">Categories</p>
+                  <p class="text-[#C6C6C6]">Nquiree</p>
+                  <p class="text-[#959595]">E-commerce</p>
                 </div>
               </div>
 
@@ -441,8 +431,8 @@
                   />
                 </div>
                 <div class="flex justify-between px-2 bg-[#242424] py-2">
-                  <p class="text-[#C6C6C6]">Name Project</p>
-                  <p class="text-[#959595]">Categories</p>
+                  <p class="text-[#C6C6C6]">PPAY - Project Pay</p>
+                  <p class="text-[#959595]">Payment System</p>
                 </div>
               </div>
             </div>
@@ -463,50 +453,70 @@
               </p>
 
               <div class="pt-5" id="Contactform">
-                <div class="flex max-sm:flex-col">
-                  <input
-                    class="border-1 w-full mr-3 px-3 py-1 outline-none rounded-[5px]"
-                    type="text"
-                    placeholder="Name"
-                  />
-                  <input
-                    class="border-1 w-full px-3 outline-none py-1 rounded-[5px] max-sm:mt-6"
-                    type="email"
-                    placeholder="Email"
-                  />
-                </div>
-                <div class="flex pt-6 max-sm:flex-col">
-                  <input
-                    class="border-1 w-full mr-3 px-3 py-1 outline-none rounded-[5px]"
-                    type="text"
-                    placeholder="Phone Number"
-                  />
-                  <input
-                    class="border-1 w-full px-3 outline-none py-1 rounded-[5px] max-sm:mt-6"
-                    type="email"
-                    placeholder="Service Of Interest"
-                  />
-                </div>
-                <div class="flex pt-6 max-sm:flex-col">
-                  <input
-                    class="border-1 w-full mr-3 px-3 py-1 outline-none rounded-[5px]"
-                    type="text"
-                    placeholder="Timeline"
-                  />
-                  <textarea
-                    class="border-1 w-full px-3 outline-none py-1 max-sm:mt-6"
-                    name=""
-                    id=""
-                    placeholder="Project Details..."
-                  ></textarea>
-                </div>
-                <div class="pt-3 text-end">
-                  <button
-                    class="border-1 px-5 py-1 rounded-[5px] cursor-pointer"
-                  >
-                    Send
-                  </button>
-                </div>
+                <div id="contact-message" class="hidden mb-4 p-3 rounded-[5px] text-center"></div>
+                <form id="contact-form" action="{{ route('contact.send') }}" method="POST">
+                  @csrf
+                  <div class="flex max-sm:flex-col">
+                    <input
+                      class="border-1 w-full mr-3 px-3 py-1 outline-none rounded-[5px] bg-transparent text-white placeholder-[#707070]"
+                      type="text"
+                      name="name"
+                      id="name"
+                      placeholder="Name"
+                      required
+                    />
+                    <input
+                      class="border-1 w-full px-3 outline-none py-1 rounded-[5px] max-sm:mt-6 bg-transparent text-white placeholder-[#707070]"
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="Email"
+                      required
+                    />
+                  </div>
+                  <div class="flex pt-6 max-sm:flex-col">
+                    <input
+                      class="border-1 w-full mr-3 px-3 py-1 outline-none rounded-[5px] bg-transparent text-white placeholder-[#707070]"
+                      type="text"
+                      name="phone"
+                      id="phone"
+                      placeholder="Phone Number"
+                    />
+                    <input
+                      class="border-1 w-full px-3 outline-none py-1 rounded-[5px] max-sm:mt-6 bg-transparent text-white placeholder-[#707070]"
+                      type="text"
+                      name="service"
+                      id="service"
+                      placeholder="Service Of Interest"
+                    />
+                  </div>
+                  <div class="flex pt-6 max-sm:flex-col">
+                    <input
+                      class="border-1 w-full mr-3 px-3 py-1 outline-none rounded-[5px] bg-transparent text-white placeholder-[#707070]"
+                      type="text"
+                      name="timeline"
+                      id="timeline"
+                      placeholder="Timeline"
+                    />
+                    <textarea
+                      class="border-1 w-full px-3 outline-none py-1 max-sm:mt-6 bg-transparent text-white placeholder-[#707070]"
+                      name="message"
+                      id="message"
+                      rows="4"
+                      placeholder="Project Details..."
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="pt-3 text-end">
+                    <button
+                      type="submit"
+                      id="submit-btn"
+                      class="border-1 px-5 py-1 rounded-[5px] cursor-pointer hover:bg-[#FD6F00] hover:text-white transition-colors"
+                    >
+                      Send
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -515,23 +525,36 @@
         <!-- footer -->
         <footer>
           <div class="py-5 px-4" id="footer">
-            <h2 class="gradient-box text-2xl text-center">LOGO</h2>
+            <div class="flex justify-center">
+              <img src="{{ asset('assets/images/logo_2.png') }}" alt="Dhanvi - Full Stack Developer" class="h-10" />
+            </div>
 
             <div class="flex justify-center pt-5">
               <ul
                 class="w-full max-w-xl flex flex-wrap justify-center gap-4 md:gap-8 text-center"
               >
-                <li class="text-[#959595] cursor-pointer">Dashboard</li>
-                <li class="text-[#959595] cursor-pointer">Service</li>
-                <li class="text-[#959595] cursor-pointer">About me</li>
-                <li class="text-[#959595] cursor-pointer">Portfolio</li>
-                <li class="text-[#959595] cursor-pointer">Contact me</li>
+                <li class="text-[#959595] cursor-pointer hover:text-[#FD6F00] transition-colors">
+                  <a href="#Dashboard">Dashboard</a>
+                </li>
+                <li class="text-[#959595] cursor-pointer hover:text-[#FD6F00] transition-colors">
+                  <a href="#Service">Service</a>
+                </li>
+                <li class="text-[#959595] cursor-pointer hover:text-[#FD6F00] transition-colors">
+                  <a href="#AboutMe">About me</a>
+                </li>
+                <li class="text-[#959595] cursor-pointer hover:text-[#FD6F00] transition-colors">
+                  <a href="#PortfolioSection">Portfolio</a>
+                </li>
+                <li class="text-[#959595] cursor-pointer hover:text-[#FD6F00] transition-colors">
+                  <a href="#ContactMe">Contact me</a>
+                </li>
               </ul>
             </div>
 
             <div class="flex pt-4 text-white justify-center space-x-2">
-              <img src="{{ asset('assets/images/frame_52.png') }}" alt="" class="w-6 h-6" />
-              <img src="{{ asset('assets/images/frame_53.png') }}" alt="" class="w-6 h-6" />
+              <a href="https://www.linkedin.com/in/dhanvi-bhadiyadara-634bbb205" target="_blank">
+                <img src="{{ asset('assets/images/frame_53.png') }}" alt="LinkedIn" class="w-6 h-6 cursor-pointer" />
+              </a>
             </div>
 
             <div class="flex pt-6 justify-center text-white">
@@ -551,7 +574,7 @@
 
             <div class="text-center pt-3">
               <p class="text-[#707070] text-sm">
-                Designed by Dhanvi Bhadiyadra PHP/Laravel Developer
+                Designed by Dhanvi Bhadiyadra - Laravel / Vue.js Developer
               </p>
             </div>
           </div>
@@ -578,6 +601,52 @@
 
       menuIcon.addEventListener("click", () => {
         navBar.classList.toggle("show");
+      });
+
+      // Contact Form Submission
+      document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const form = this;
+        const submitBtn = document.getElementById('submit-btn');
+        const messageDiv = document.getElementById('contact-message');
+        const formData = new FormData(form);
+        
+        // Disable submit button
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        messageDiv.classList.add('hidden');
+        
+        fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'X-Requested-With': 'XMLHttpRequest',
+            'Accept': 'application/json'
+          }
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            messageDiv.className = 'mb-4 p-3 rounded-[5px] text-center bg-green-500 text-white';
+            messageDiv.textContent = data.message;
+            messageDiv.classList.remove('hidden');
+            form.reset();
+          } else {
+            messageDiv.className = 'mb-4 p-3 rounded-[5px] text-center bg-red-500 text-white';
+            messageDiv.textContent = data.message || 'An error occurred. Please try again.';
+            messageDiv.classList.remove('hidden');
+          }
+        })
+        .catch(error => {
+          messageDiv.className = 'mb-4 p-3 rounded-[5px] text-center bg-red-500 text-white';
+          messageDiv.textContent = 'An error occurred. Please try again.';
+          messageDiv.classList.remove('hidden');
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send';
+        });
       });
     </script>
 
