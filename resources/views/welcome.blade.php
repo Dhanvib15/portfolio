@@ -915,7 +915,7 @@
             </div>
 
             <div class="flex pt-4 text-white justify-center space-x-2">
-              <a href="https://www.linkedin.com/in/dhanvi-bhadiyadara-634bbb205" target="_blank">
+              <a href="https://www.linkedin.com/in/dhanvi-bhadiyadara-634bbb205?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
                 <img src="{{ asset('assets/images/frame_53.png') }}" alt="LinkedIn" class="w-6 h-6 cursor-pointer" />
               </a>
             </div>
