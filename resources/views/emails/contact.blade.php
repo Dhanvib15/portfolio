@@ -59,32 +59,32 @@
     <div class="content">
         <div class="field">
             <span class="label">Name:</span>
-            <div class="value">{{ $name }}</div>
+            <div class="value">{{ e($name ?? '') }}</div>
         </div>
         
         <div class="field">
             <span class="label">Email:</span>
-            <div class="value">{{ $email }}</div>
+            <div class="value">{{ e($email ?? '') }}</div>
         </div>
         
         <div class="field">
             <span class="label">Phone Number:</span>
-            <div class="value">{{ $phone }}</div>
+            <div class="value">{{ e($phone ?? 'Not provided') }}</div>
         </div>
         
         <div class="field">
             <span class="label">Service of Interest:</span>
-            <div class="value">{{ $service }}</div>
+            <div class="value">{{ e($service ?? 'Not specified') }}</div>
         </div>
         
         <div class="field">
             <span class="label">Timeline:</span>
-            <div class="value">{{ $timeline }}</div>
+            <div class="value">{{ e($timeline ?? 'Not specified') }}</div>
         </div>
         
         <div class="field">
             <span class="label">Project Details:</span>
-            <div class="message-box">{{ $message }}</div>
+            <div class="message-box">{{ e($contactMessage ?? '') }}</div>
         </div>
     </div>
 </body>

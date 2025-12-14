@@ -38,15 +38,23 @@ class ContactMail extends Mailable
      */
     public function content(): Content
     {
+        // Ensure all values are strings and properly sanitized
+        $name = isset($this->contactData['name']) ? (string) $this->contactData['name'] : '';
+        $email = isset($this->contactData['email']) ? (string) $this->contactData['email'] : '';
+        $phone = isset($this->contactData['phone']) && !empty($this->contactData['phone']) ? (string) $this->contactData['phone'] : 'Not provided';
+        $service = isset($this->contactData['service']) && !empty($this->contactData['service']) ? (string) $this->contactData['service'] : 'Not specified';
+        $timeline = isset($this->contactData['timeline']) && !empty($this->contactData['timeline']) ? (string) $this->contactData['timeline'] : 'Not specified';
+        $contactMessage = isset($this->contactData['message']) ? (string) $this->contactData['message'] : '';
+
         return new Content(
             view: 'emails.contact',
             with: [
-                'name' => $this->contactData['name'],
-                'email' => $this->contactData['email'],
-                'phone' => $this->contactData['phone'] ?? 'Not provided',
-                'service' => $this->contactData['service'] ?? 'Not specified',
-                'timeline' => $this->contactData['timeline'] ?? 'Not specified',
-                'message' => $this->contactData['message'],
+                'name' => $name,
+                'email' => $email,
+                'phone' => $phone,
+                'service' => $service,
+                'timeline' => $timeline,
+                'contactMessage' => $contactMessage,
             ],
         );
     }
